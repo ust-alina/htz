@@ -1,0 +1,235 @@
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+    color: black;
+    background-color: #f8f8f8;
+    font-size: 18px;
+    text-align: center;
+  }
+
+  header {
+    height: 80px;
+    width: 100%;
+    position: fixed;
+    z-index: 3;
+    background-color: #f8f8f8;
+    justify-content: space-between; 
+    margin:auto;
+  }
+  .data {
+    min-width: 400px;
+  }
+
+  .tel {
+    text-decoration: underline;
+  }
+
+
+  .desktop {
+    color: black;
+    position: relative;
+    min-width: 600px;
+  }
+
+  .desktop li {
+    display: inline-block;
+    padding: 20px 10px;
+  }
+
+  .mobile {
+    z-index: 2;
+    background-color: #f8f8f8;
+    opacity: 0.9;
+    position: absolute;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    top: 0;
+    bottom:0;
+    transform: translateY(100%);
+    max-height: 0;
+    font-size: 0;
+    overflow: hidden;
+    transition: .5s all;
+    display: none;
+    
+  }
+
+  .mobile ul {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+  }
+
+  .mobile li {
+    border: 1px solid gray;
+    list-style-type: none;
+    width: 100%;
+  }
+
+  a {
+    color: black;
+    text-decoration: none;
+  }
+
+  .menu-btn {
+    display: none;
+    width: 50px;
+    height: 50px;
+    background-color: #ecf0f1;
+    border-radius: 25%;
+    position: relative;
+    float: right;
+    margin-right: 10px;
+  }
+
+  .menu-btn span,
+  .menu-btn span::before,
+  .menu-btn span::after {
+    position: absolute;
+    top: 50%; margin-top: -1px;
+    left: 50%; margin-left: -10px;
+    width: 20px;
+    height: 2px;
+    background-color: #222;
+  }
+  .menu-btn span::before,
+  .menu-btn span::after {
+    content: '';
+    display: block;
+  }
+
+  .menu-btn span::before {
+    transform: translateY(-5px);
+  }
+  .menu-btn span::after {
+    transform: translateY(5px);
+  }
+
+  #check-menu{
+    display: none;
+}
+
+#check-menu:checked ~ .mobile {
+  max-height: 100px;
+  font-size: 16px;
+}
+
+
+  .flex-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-items: center;
+  }
+
+  .black {
+    background-color: black;
+
+
+  }
+
+  main {
+    top: 80px;
+    position: relative;
+    z-index: 1;
+  }
+
+  .baner {
+    background-image: url("./изображения/кухня1.jpg");
+    height: 700px;
+    width: auto;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    text-align: center;
+    opacity: 0.6;
+    position: relative;
+    z-index: 1;
+  }
+
+  .banertext {
+      color: #f8f8f8;
+      width: 100%;
+      margin: auto;
+      z-index: 2;
+      position: absolute;
+      top: 250px;
+  }
+
+  .banertext h1 {
+    font-size: 56px;
+  }
+
+  #about {
+    padding: 40px;
+  }
+
+  .box {
+    max-width: 600px;
+    height: auto;
+    padding: 10px;
+  }
+
+  #range {
+    text-align: center;
+    background-color: #ecf0f1;
+    padding: 40px;
+  }
+
+  .rangebox {
+    max-width: 400px;
+    height: auto;
+    margin: 10px;
+  }
+
+  .contactboxs {
+    align-items: stretch;
+    padding: 30px;
+  }
+
+  .contactbox {
+    max-width: 400px;
+    height: auto;
+    padding: 30px;
+
+  }
+   .contactbox p {
+     text-align: left;
+   }
+
+  footer {
+    top: 80px;
+    position: relative;
+    z-index: 1;
+    background-color: #202020;
+    color: #47494a;
+    padding: 30px;
+  }
+
+  footer li {
+    display: inline-block;
+    margin: 10px;
+  }
+
+  footer a {
+    color: gainsboro;
+    text-decoration: underline;
+  }
+
+  .info {
+    padding-top: 20px;
+  }
+
+  
+
+  @media only screen and (max-width: 1024px) {
+    .menu-btn, .mobile {
+      display: block;
+    }
+    .desktop {
+      display: none;
+    }
+  }
